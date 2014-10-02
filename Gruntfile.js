@@ -362,11 +362,8 @@ module.exports = function (grunt) {
         dest: '<%= yeoman.dist %>',
         src: [
           'config.xml',
-          'gulpfile.js',
           'icon/**/*',
-          'package.json',
-          'splash/**/*',
-          'upload.sh'
+          'splash/**/*'
         ]
       }
     },
