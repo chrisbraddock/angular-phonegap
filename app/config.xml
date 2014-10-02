@@ -1,0 +1,55 @@
+<!-- Replace id with your chosen bundle identifier.  Usually, I choose a few that I'll use for different release types:
+       org.brophy.app.test  (dev version)
+       org.brophy.app.rc (release candidate - usually send to client for Qa and remain stable while I continue further dev and pushes)
+       org.brophy.app (prodiuction - pushed to app store) --><?xml version="1.0" encoding="UTF-8"?><widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="org.brophy.braddocktest" version="0.0.2">
+
+    <name>Your App Name</name>
+    <description>App description</description>
+
+    <author href="http://www.brophy.org" email="matt@brophy.org"/>
+
+    <preference name="phonegap-version" value="3.5.0"/>
+    <preference name="webviewbounce" value="false"/>
+
+    <!-- Set to false to prevent older android platforms from obscuring inputs
+         with the keyboard when they are towards the bottom of the screen.  See:
+           - http://community.phonegap.com/nitobi/topics/android_windowsoftinputmode_issues_when_working_with_different_android_versions
+           - http://community.phonegap.com/nitobi/topics/android_windowsoftinputmode_config_xml_option_doesnt_work_on_moto_x
+    -->
+    <preference name="fullscreen" value="false"/>
+
+    <!-- Android only back to 4.0 -->
+    <preference name="android-minSdkVersion" value="14"/>
+
+    <!-- Build Only for the Following -->
+    <gap:platform name="ios"/>
+    <gap:platform name="android"/>
+
+    <!-- Default Icons -->
+    <icon src="icon/icon.png"/>
+
+    <!-- iOS Icons (many more to be specified for a propduction ready app) -->
+    <icon src="icon/ios/icon.png" gap:platform="ios" width="57" height="57"/>
+
+    <!-- Android Icons (many more to be specified for a propduction ready app) -->
+    <icon src="icon/android/icon-mdpi.png" gap:platform="android" gap:density="mdpi"/>
+
+    <!-- Default Splash Screen -->
+    <gap:splash src="splash/splash.png"/>
+
+    <!-- iOS Splash Screens (many more to be specified for a propduction ready app) -->
+    <gap:splash src="splash/ios/Default.png" gap:platform="ios" width="320" height="480"/>
+    <gap:splash src="splash/ios/Default-568h@2x.png" gap:platform="ios" width="640" height="1136"/>
+
+    <!-- Android Splash Screens, see:
+         http://stackoverflow.com/questions/10574363/android-splash-screen-image-sizes-to-fit-all-devices
+    -->
+    <gap:splash src="splash/android/splash-mdpi.png" gap:platform="android" gap:density="mdpi"/>
+
+    <!-- Passtthrough to plist property for iOS -->
+    <gap:config-file platform="ios" parent="UIViewControllerBasedStatusBarAppearance" overwrite="true">
+        <false/>
+    </gap:config-file>
+
+    <access origin="*"/>
+</widget>
