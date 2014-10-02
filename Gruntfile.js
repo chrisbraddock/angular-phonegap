@@ -355,6 +355,19 @@ module.exports = function (grunt) {
         cwd: '<%= yeoman.app %>/styles',
         dest: '.tmp/styles/',
         src: '{,*/}*.css'
+      },
+      phonegap: {
+        expand: true,
+        cwd: '<%= yeoman.app %>',
+        dest: '<%= yeoman.dist %>',
+        src: [
+          'config.xml',
+          'gulpfile.js',
+          'icon/**/*',
+          'package.json',
+          'splash/**/*',
+          'upload.sh'
+        ]
       }
     },
 
@@ -426,6 +439,11 @@ module.exports = function (grunt) {
     'filerev',
     'usemin',
     'htmlmin'
+  ]);
+
+  grunt.registerTask('buildPhonegap', [
+    'build',
+    'copy:phonegap'
   ]);
 
   grunt.registerTask('default', [
