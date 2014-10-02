@@ -1,10 +1,8 @@
-<!-- Replace id with your chosen bundle identifier.  Usually, I choose a few that I'll use for different release types:
-       org.brophy.app.test  (dev version)
-       org.brophy.app.rc (release candidate - usually send to client for Qa and remain stable while I continue further dev and pushes)
-       org.brophy.app (prodiuction - pushed to app store) --><?xml version="1.0" encoding="UTF-8"?><widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="org.brophy.braddocktest" version="0.0.2">
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.braddock.test" version="0.0.2">
 
-    <name>Your App Name</name>
-    <description>App description</description>
+    <name>angular-phonegap</name>
+    <description>Test Angular/PhoneGap App</description>
 
     <author href="http://www.brophy.org" email="matt@brophy.org"/>
 
