@@ -26,7 +26,25 @@
     "grunt-wiredep": "^1.7.0",
     "jshint-stylish": "^0.2.0",
     "load-grunt-tasks": "^0.4.0",
-    "time-grunt": "^0.3.1"
+    "time-grunt": "^0.3.1",
+    "gulp": "~3.5.5",
+    "gulp-usemin": "~0.3.3",
+    "gulp-minify-css": "~0.3.0",
+    "gulp-less": "~1.2.2",
+    "gulp-clean": "~0.2.4",
+    "express": "~4.0.0-rc2",
+    "gulp-uglify": "~0.2.1",
+    "gulp-preprocess": "~1.0.1",
+    "yargs": "~1.2.1",
+    "gulp-util": "~2.2.14",
+    "q": "~1.0.1",
+    "run-sequence": "~0.3.6",
+    "fs-extra": "~0.8.1",
+    "archiver": "~0.8.1",
+    "xmldom": "~0.1.19",
+    "request": "~2.34.0",
+    "gulp-bump": "~0.1.8",
+    "jshint": "~2.5.2"
   },
   "engines": {
     "node": ">=0.10.0"
