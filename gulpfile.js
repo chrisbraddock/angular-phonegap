@@ -1,20 +1,10 @@
 var args = require('yargs').argv,
-    gulp = require('gulp'),
-    isProd = args.prod != null;
-
-// Clean then build
-gulp.task('build', function (cb) {
-    var runSequence = require('run-sequence');
-    runSequence('clean-dist',
-                'copy-static',
-                cb);
-});
+    gulp = require('gulp');
 
 // Bumpo the package.json versions, build the app, and zip up a file for PG build
 gulp.task('phonegap', function (cb) {
     var runSequence = require('run-sequence');
-    runSequence('bump-version',
-                'build',
+    runSequence(/*'bump-version',*/
                 'zip-dist',
                 cb);
 });
@@ -70,27 +60,4 @@ gulp.task('bump-version', function (cb) {
 
     doc.documentElement.setAttribute('version', version);
     fs.writeFileSync('config.xml', new xmldom.XMLSerializer().serializeToString(doc));
-});
-
-// Copy all static assets to dist/
-gulp.task('copy-static', function () {
-    return gulp.src(['images/**',
-                     'icon/**',
-                     'splash/**',
-                     'scripts/**',
-                     'styles/**',
-                     'views/**',
-                     '*.html',
-                     'config.xml'],
-                    { base: './' })
-               .pipe(gulp.dest('dist'));
-});
-
-// Remove build artifacts
-gulp.task('clean', ['clean-dist']);
-
-gulp.task('clean-dist', function () {
-    var clean = require('gulp-clean');
-    return gulp.src(['dist', 'dist.zip'], {read: false})
-               .pipe(clean());
 });
